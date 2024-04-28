@@ -1,0 +1,54 @@
+######################
+# configuration file #
+######################
+
+---
+
+doEnrichment:
+  CPUs: 120
+  from: 1
+  to: 9
+  # 富集前的准备，筛选出基因个数在 [minGeneNum, maxGeneNum] 范围内的基因通路参与富集的计算
+  minGeneNum: 1
+  maxGeneNum: .inf
+
+formatEnrichmentResult:
+  # 在富集的原始计算结果中，筛选出通路和基因特征向量里公共基因个数在 [minCommonGeneNum, maxCommonGeneNum] 范围内的通路输出到 .xlsx 文件
+  minCommonGeneNum: 1
+  maxCommonGeneNum: .inf
+  # signif_level: 0.05
+  signif_level: 0.10
+
+species_list:
+  - boxer1-E102
+  - dingo1-E102
+  - redfox-E102
+  - dhole
+  - wolf
+
+species_info_list:
+
+  - species: "boxer1-E102"
+    Latin_name: "Canis_lupus_familiaris"
+    family: "Canidae"
+    Taxonomy_ID: 9615
+
+  - species: "dingo1-E102"
+    Latin_name: "Canis_lupus_dingo"
+    family: "Canidae"
+    Taxonomy_ID: 286419
+
+  - species: "redfox-E102"
+    Latin_name: "Vulpes_vulpes"
+    family: "Canidae"
+    Taxonomy_ID: 9627
+
+  - species: "dhole"
+    Latin_name: "Cuon_alpinus"
+    family: "Canidae"
+    Taxonomy_ID: 68730
+
+  - species: "wolf"
+    Latin_name: "Canis_lupus"
+    family: "Canidae"
+    Taxonomy_ID: 9612
