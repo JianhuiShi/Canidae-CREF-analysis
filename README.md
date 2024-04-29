@@ -59,13 +59,13 @@ All computational results can be found in the `results` directory generated.
   This is the configuration file that contains the basic information of the species used in computation.
 
   * **`motifRank.R`**
-  This script computes the rank of all motifs at level 1-9 according to their loadings in polarized motif-eigenvectors of all species.
+  This script computes the rank of all motifs at levels 1-9 according to their loadings in polarized motif-eigenvectors of all species.
 
   * **`PCC.R`**
-  This script computes the Pearson correlation coefficients between motif-eigenvectors at level 1-9 across speices.
+  This script computes the Pearson correlation coefficients between motif-eigenvectors at levels 1-9 across speices.
 
   * **`projection.R`**
-  This script computes the projections of 4th and 5th motif-eigenvectors of one species onto
+  This script computes the projections of the 4th and 5th motif-eigenvectors of one species onto
 the 2-D eigen space spanned by the 4th and 5th motif-eigenvectors of another species.
 
   * #### `SVD` directory

@@ -1,8 +1,6 @@
 ###############################################################################
-# Usage:
-# Rscript gene_enrichment_analysis.R
 # Function:
-# perform the gene enrichment analysis by the Wilcoxon scoring method
+# Perform the gene enrichment analysis by the Wilcoxon scoring method
 # on the polarized gene-eigenvector.
 # Input:
 # - "data/pathway/{family}.{go.bp/go.cc/go.mf/reactome/kegg}.tsv"

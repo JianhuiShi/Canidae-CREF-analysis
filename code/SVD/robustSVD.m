@@ -1,11 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Usage:
-% matlab robustSVD.m
 % Function:
-% perform the gene enrichment analysis by the Wilcoxon scoring method
-% on the polarized gene eigenvectors.
+% Perform the robust SVD on the CREF matrix.
 % Input:
-% - "data/CREF_Matrix/{species}_CREF_Matrix.tsv
+% - "data/CREF_Matrix/{species}_CREF_Matrix.tsv"
 % - "data/geneName/{species}_genename.txt"
 % - "data/motif_symbol.txt"
 % Output:

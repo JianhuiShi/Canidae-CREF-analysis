@@ -1,14 +1,12 @@
 ###############################################################################
-# Usage:
-# Rscript motifRank.R
 # Function:
-# compute the rank of all motifs at level 1-9 according to their loadings
+# Compute the rank of all motifs according to their loadings
 # in polarized motif-eigenvectors.
 # Input:
-# - "motif_symbol.txt"
-# - "{species}_{motif_*}_loadings.txt"
+# - "data/motif_symbol.txt"
+# - "results/loadings/{species}_{motif_*}_loadings.txt"
 # Output (optional):
-# - "[motifRank/]motifRank[.RData/_level_{l}.csv/.xlsx]"
+# - "results/[motifRank/]motifRank[.RData/_level_{l}.csv/.xlsx]"
 ###############################################################################
 
 # install.packages("rlist")

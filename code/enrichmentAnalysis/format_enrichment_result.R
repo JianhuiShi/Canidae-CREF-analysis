@@ -1,8 +1,6 @@
 ###############################################################################
-# Usage:
-# Rscript format_enrichment_result.R
 # Function:
-# formats the raw enrichment results (.RData) into readable file (.xlsx).
+# Formats the raw enrichment results (.RData) into readable file (.xlsx).
 # Input:
 # - "results/enrichmentAnalysis/RData/enrichment_result_{species}.RData"
 # Output:

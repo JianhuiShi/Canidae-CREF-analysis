@@ -1,13 +1,11 @@
 ###############################################################################
-# Usage:
-# Rscript PCC.R
 # Function:
-# compute the Pearson correlation coefficients between motif-eigenvectors
-# at level 1-9 across speices.
+# Compute the Pearson correlation coefficients between motif-eigenvectors
+# across speices.
 # Input:
-# - "SVD/{s}_V0_1402.txt"
+# - "results/SVD/{species}_V0_1402.txt"
 # Output (optional):
-# - "[PCC/]cc.[RData/tsv/xlsx]"
+# - "results/[PCC/]cc.[RData/tsv/xlsx]"
 ###############################################################################
 
 # install.packages("rlist")

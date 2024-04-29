@@ -1,13 +1,12 @@
 ###############################################################################
-# Usage:
-# Rscript projection.R
 # Function:
-# compute the projection of 4th and 5th motif-eigenvectors of one species onto
-# the 2-D eigen space spanned by the 4th and 5th motif-eigenvectors of another species
+# Compute the projections of the 4th and 5th motif-eigenvectors of one species
+# onto the 2-D eigen space spanned by the 4th and 5th motif-eigenvectors of
+# another species.
 # Input:
-# - "SVD/{s}_V0_1402.txt"
+# - "results/SVD/{species}_V0_1402.txt"
 # Output (optional):
-# - "[projection/]projection_4-5.[RData/tsv/xlsx]"
+# - "results/[projection/]projection_4-5.[RData/tsv/xlsx]"
 ###############################################################################
 
 # install.packages("rlist")
