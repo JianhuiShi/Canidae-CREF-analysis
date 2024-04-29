@@ -42,8 +42,7 @@ if (!dir.exists(raw_result.dir)) dir.create(raw_result.dir, recursive = TRUE)
 
 # Parameters setting ----------------------------------------------------------
 
-# CPUs <- 8L
-CPUs <- 120L
+CPUs <- 8L
 
 from <- 4L
 to <- 4L
