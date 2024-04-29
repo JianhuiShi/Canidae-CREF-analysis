@@ -65,6 +65,10 @@ for j = 1:1403
         VCell{1}(:, j) = -VCell{1}(:, j);
         UCell{1}(:, j) = -UCell{1}(:, j);
     end
+    if j == 2 || j == 4 || j == 5 || j == 6
+        VCell{1}(:, j) = -VCell{1}(:, j);
+        UCell{1}(:, j) = -UCell{1}(:, j);
+    end
     for i = 2:speciesNum
         if(dot(VCell{1}(:, j), VCell{i}(:, j)) < 0)
             VCell{i}(:, j) = -VCell{i}(:, j);
@@ -73,7 +77,9 @@ for j = 1:1403
     end
 end
 
-%% save UCell, VCell ,SCell of each species to .txt files separately
+
+
+%% save UCell, VCell, SCell of each species to .txt files separately
 for i = 1:speciesNum
     filename = fullfile(SVD_dir, [species_list{i}, '_U0_9.txt']);
     cell2txt(UCell{i}, filename, 10);
