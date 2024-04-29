@@ -39,16 +39,18 @@ if (!dir.exists(result.dir)) dir.create(result.dir)
 
 # Parameters setting ----------------------------------------------------------
 
-minCommonGeneNum <- config$formatEnrichmentResult$minCommonGeneNum
-maxCommonGeneNum <- config$formatEnrichmentResult$maxCommonGeneNum
+# 在富集的原始计算结果中，筛选出通路和基因特征向量里公共基因个数在 [minCommonGeneNum, maxCommonGeneNum] 范围内的通路输出到 .xlsx 文件
+minCommonGeneNum <- 1L
+maxCommonGeneNum <- Inf
 
 # 截取至多 trimGeneNum 个基因的名字存入字符串，防止字符串太长导致存入Excel单元格时溢出报错
 trimGeneNum <- 50L
 
-signif_level <- config$formatEnrichmentResult$signif_level
+# signif_level <- 0.05
+signif_level <- 0.10
 
-from <- config$doEnrichment$from
-to <- config$doEnrichment$to
+from <- 1L
+to <- 9L
 
 species_list <- config$species_list
 species_family_list <- config$species_info_list %>%

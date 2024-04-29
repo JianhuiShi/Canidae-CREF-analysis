@@ -32,7 +32,7 @@ or click the **Download Zip** button and decompress the package.
 cd code
 bash run.sh
 ```
-All computational results can be found in the `results` directory.
+All computational results can be found in the `results` directory generated.
 
 ## 5. Directory description
 
@@ -56,7 +56,7 @@ All computational results can be found in the `results` directory.
   This is the script used for running other scripts all in sequence.
 
   * **`config.yaml`**
-  This is the configuration file that contains the basic information of parameters used in computation.
+  This is the configuration file that contains the basic information of the species used in computation.
 
   * **`motifRank.R`**
   This script computes the rank of all motifs at level 1-9 according to their loadings in polarized motif-eigenvectors of all species.

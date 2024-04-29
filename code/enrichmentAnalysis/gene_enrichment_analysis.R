@@ -44,10 +44,11 @@ if (!dir.exists(raw_result.dir)) dir.create(raw_result.dir, recursive = TRUE)
 
 # Parameters setting ----------------------------------------------------------
 
-CPUs <- config$doEnrichment$CPUs
+# CPUs <- 8L
+CPUs <- 120L
 
-from <- config$doEnrichment$from
-to <- config$doEnrichment$to
+from <- 1L
+to <- 9L
 
 species_list <- config$species_list
 species_family_list <- config$species_info_list %>%
@@ -91,8 +92,8 @@ for (f in family_list) {
 # pre-processing --------------------------------------------------------------
 
 # 做富集前，筛选出基因个数在 [minGeneNum, maxGeneNum] 范围内的基因通路参与富集的计算
-minGeneNum <- config$doEnrichment$minGeneNum
-maxGeneNum <- config$doEnrichment$maxGeneNum
+minGeneNum <- 1L
+maxGeneNum <- Inf
 for (f in family_list) {
     for (p in pathway_list) {
         pathway_data.list[[f]][[p]] <- pathway_data.list[[f]][[p]] %>%
