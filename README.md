@@ -3,16 +3,30 @@
 ## 1. Introduction
 
 Canidae-CREF-analysis is a comprehensive and comparative analysis of genome-wide cis-regulatory element frequency (CREF) for five canids: dog, dingo, red fox, dhole, and wolf.
-It provides a systematic framework for analyzing the genome-wide CREF and can be applied to other species.
-The major results are listed as follows:
 
-1. The top three eigen-modules are highly conserved while the fourth and fifth ones underwent a phase transition in dogs.
+### 1.1 Pipeline description
 
-2. The red fox is closest to the singularity or fusion point that characterizes the phase transition.
+1. Input the species-specific CREF matrices of five canids.
+2. Perform the robust singular value decomposition (SVD) to stratify each CREF matrix into multiple dual eigen-modules at frequency levels from high to low. Each module is comprised of the singular value and the pair of gene- and motif-eigenvectors.
+3. Polarize the gene- and motif-eigenvectors by sorting their loadings.
+4. Evaluate the correlation between the motif-eigenvectors.
+5. Analyze the rotation between motif-eigenvectors by projecting the fourth and fifth motif-eigenvectors of the other four canids onto the 2-D eigenspaces of dogs.
+6. Compute the rank of all motifs according to their loadings in polarized motif-eigenvectors.
+7. Perform the enrichment analysis on the polarized gene-eigenvectors to identify the biological pathways significantly enriched at the two poles.
 
-3. Myelination, long-term memory, and cochlear development are significantly enhanced at level four in dogs.
+### 1.2 Major results
 
-## 2. Installation
+1. The top three eigen-modules are highly conserved while a phase transition occurred between the fourth and fifth ones in dogs.
+
+2. The dogs underwent a rotation in its motif-eigenvectors with reference to the wolf. The motif-eigenvectors of dingo and dhole are highly correlated with that of the dog.
+
+3. Long-term memory, myelination, and cochlear development are significantly enhanced at level four in dogs.
+
+4. The red fox is closest to the singularity or fusion point that characterizes the phase transition onset.
+
+**Note**: This pipeline provides a systematic framework for analyzing the genome-wide CREF and is applicable to the comparison between other species.
+
+## 2. Install
 
 You can download the codes and data by the command:
 ```bash
@@ -59,19 +73,19 @@ All computational results can be found in the `results` directory generated.
   This is the configuration file that contains the basic information of the species used in computation.
 
   * **`motifRank.R`**
-  This script computes the rank of all motifs at levels 1-9 according to their loadings in polarized motif-eigenvectors of all species.
+  This script computes the rank of all motifs according to their loadings in polarized motif-eigenvectors. The results are saved in the file `results/motifRank.xlsx`.
 
   * **`PCC.R`**
-  This script computes the Pearson correlation coefficients between motif-eigenvectors at levels 1-9 across speices.
+  This script computes the Pearson correlation coefficients between motif-eigenvectors across speices. The results are saved in the file `results/PCC.xlsx`.
 
   * **`projection.R`**
   This script computes the projections of the 4th and 5th motif-eigenvectors of one species onto
-the 2-D eigen space spanned by the 4th and 5th motif-eigenvectors of another species.
+the 2-D eigen space spanned by the 4th and 5th motif-eigenvectors of another species. The results are saved in the file `results/projection_4-5.xlsx`.
 
   * #### `SVD` directory
 
     * **`robustSVD.m`**
-    This script performs the robust singular value decomposition (robust SVD) on the CREF matrices of five canids. The singular values, gene-eigenvectors, and motif-eigenvectors are saved in `results/SVD`. The polarized eigenvectors are saved in `results/loadings`.
+    This script performs the robust singular value decomposition (robust SVD) on the CREF matrices of five canids. The singular values, gene-eigenvectors, and motif-eigenvectors are saved in the directory `results/SVD`. The polarized eigenvectors are saved in the directory `results/loadings`.
 
     * **`scripts`** directory
     contains matlab functions we defined for robust SVD.
@@ -85,10 +99,10 @@ the 2-D eigen space spanned by the 4th and 5th motif-eigenvectors of another spe
   * #### `enrichmentAnalysis` directory
 
     * **`gene_enrichment_analysis.R`**
-    This script performs the gene enrichment analysis by the Wilcoxon scoring method on the polarized gene eigenvectors. The results are saved in `results/enrichment/RData`.
+    This script performs the gene enrichment analysis by the Wilcoxon scoring method on the polarized gene eigenvectors. The results are saved in the directory `results/enrichment/RData`.
 
     * **`format_enrichment_result.R`**
-    This script formats the raw enrichment results (.RData) in `results/enrichment/RData` into readable files (.xlsx). The results are saved in `results/enrichment/xlsx`.
+    This script formats the raw enrichment results (.RData) in `results/enrichment/RData` into readable files (.xlsx). The results are saved in the directory `results/enrichment/xlsx`.
 
     * **`enrichment_utils.R`**
     This script contains functions we defined for enrichment analysis.
