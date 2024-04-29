@@ -1,3 +1,5 @@
+# Copyright © 2024, Jianhui Shi & Lei M. Li. Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing 100190, China
+
 ###############################################################################
 # Function:
 # Perform the gene enrichment analysis by the Wilcoxon scoring method
@@ -42,7 +44,7 @@ if (!dir.exists(raw_result.dir)) dir.create(raw_result.dir, recursive = TRUE)
 
 # Parameters setting ----------------------------------------------------------
 
-CPUs <- 8L
+CPUs <- 120L
 
 from <- 4L
 to <- 4L

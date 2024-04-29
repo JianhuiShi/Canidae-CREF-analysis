@@ -1,3 +1,5 @@
+% Copyright © 2024, Jianhui Shi & Lei M. Li. Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing 100190, China
+
 function motifWrite(species, VCell, col, loading_dir, motif_path)
 motif = readtable(motif_path, 'ReadVariableNames', false, 'Delimiter', ' ');
 motif = motif.Var1;

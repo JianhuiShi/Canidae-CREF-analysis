@@ -1,3 +1,5 @@
+# Copyright © 2024, Jianhui Shi & Lei M. Li. Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing 100190, China
+
 ###############################################################################
 # Function:
 # Compute the projections of the 4th and 5th motif-eigenvectors of one species

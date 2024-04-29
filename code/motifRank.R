@@ -1,3 +1,5 @@
+# Copyright © 2024, Jianhui Shi & Lei M. Li. Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing 100190, China
+
 ###############################################################################
 # Function:
 # Compute the rank of all motifs according to their loadings

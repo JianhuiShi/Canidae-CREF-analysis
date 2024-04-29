@@ -1,3 +1,4 @@
+# Copyright © 2024, Jianhui Shi & Lei M. Li. Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing 100190, China
 
 enrichment_wilcoxon_test <- function(pathway.data, loading.data) {
 
