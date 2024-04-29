@@ -47,8 +47,8 @@ trimGeneNum <- 50L
 # signif_level <- 0.05
 signif_level <- 0.10
 
-from <- 1L
-to <- 9L
+from <- 4L
+to <- 4L
 
 species_list <- config$species_list
 species_family_list <- config$species_info_list %>%

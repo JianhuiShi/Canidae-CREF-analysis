@@ -45,8 +45,8 @@ if (!dir.exists(raw_result.dir)) dir.create(raw_result.dir, recursive = TRUE)
 # CPUs <- 8L
 CPUs <- 120L
 
-from <- 1L
-to <- 9L
+from <- 4L
+to <- 4L
 
 species_list <- config$species_list
 species_family_list <- config$species_info_list %>%
